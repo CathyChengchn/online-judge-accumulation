@@ -1,0 +1,47 @@
+//C language
+
+//hdoj-2006
+
+#include <stdio.h>
+int main()
+{
+int n,i,t,sum;
+while(scanf("%d",&n)!=EOF)
+{
+    sum=1;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&t);
+        if(t%2==1)
+            sum*=t;
+    }
+    printf("%d\n",sum);
+}
+    return 0;
+}
+
+//hdoj-2007
+
+#include <stdio.h>
+int main()
+{
+int m,n,x,y,i;
+while(scanf("%d%d",&n,&m)!=EOF)
+{
+    x=y=0;
+    if(m>n){i=m,m=n,n=i;}
+    for(m;m<=n;m++)
+    {
+        if(m%2==1)
+            y+=m*m*m;
+        else
+            x+=m*m;
+    }
+        printf("%d %d\n",x,y);
+    }
+    return 0;
+}
+
+//hjoj 2008
+
+
