@@ -2,3 +2,6 @@
 int n,p[10000],t[10000],q[10000];
 int main(){ int i,j,k,m=0; memset(p,0,sizeof(p)); memset(t,0,sizeof(t)); memset(q,0,sizeof(q)); for(i=2;i<10000;i++){  if(!p[i]){   q[m++]=i;   for(j=2;j<10000;j++){    if(i*j>=10000)break;    p[i*j]=1;   }  } } for(i=0;i<m;i++) for(j=i;j<m;j++) for(k=j;k<m;k++){  if(q[i]+q[j]+q[k]>10000)break;  t[q[i]+q[j]+q[k]]++; } while(scanf("%d",&n)!=EOF){  printf("%d\n",t[n]); }
 }
+....................
+#include <iostream>#include <cstdio>#include <cstring>#include <algorithm>using namespace std;int main(){    int n,i,s[1000],sum=0;    scanf("%d",&n);    for (i=0;i<2*n;i++){        scanf("%d",&s[i]);    }    sort(s,s+2*n);    if(s[n-1]<s[n])        printf("YES\n");    else        printf("NO\n");
+    return 0;}
